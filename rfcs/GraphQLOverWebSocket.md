@@ -34,10 +34,12 @@ The server must receive the connection initialisation message within the allowed
 
 If the server receives more than one `ConnectionInit` message at any given time, the server will close the socket with the event `4429: Too many initialisation requests`.
 
+If the server wishes to reject the connection, for example during authentication, it is recommended to close the socket with `4403: Forbidden`.
+
 ```typescript
 interface ConnectionInitMessage {
   type: 'connection_init';
-  payload?: Record<string, unknown>;
+  payload?: Record<string, unknown> | null;
 }
 ```
 
@@ -52,7 +54,7 @@ The server can use the optional `payload` field to transfer additional details a
 ```typescript
 interface ConnectionAckMessage {
   type: 'connection_ack';
-  payload?: Record<string, unknown>;
+  payload?: Record<string, unknown> | null;
 }
 ```
 
@@ -73,7 +75,7 @@ The optional `payload` field can be used to transfer additional details about th
 ```typescript
 interface PingMessage {
   type: 'ping';
-  payload?: Record<string, unknown>;
+  payload?: Record<string, unknown> | null;
 }
 ```
 
@@ -90,7 +92,7 @@ The optional `payload` field can be used to transfer additional details about th
 ```typescript
 interface PongMessage {
   type: 'pong';
-  payload?: Record<string, unknown>;
+  payload?: Record<string, unknown> | null;
 }
 ```
 
@@ -102,7 +104,7 @@ Requests an operation specified in the message `payload`. This message provides 
 
 If there is already an active subscriber for an operation matching the provided ID, regardless of the operation type, the server **must** close the socket immediately with the event `4409: Subscriber for <unique-operation-id> already exists`.
 
-The server needs only keep track of IDs for as long as the subscription is active. Once a client completes an operation, it is free to re-use that ID.
+The server needs only keep track of IDs for as long as the subscription is active. Once a client completes an operation, it is free to reuse that ID.
 
 ```typescript
 interface SubscribeMessage {
@@ -174,7 +176,7 @@ Direction: **bidirectional**
 
 Receiving a message of a type or format which is not specified in this document will result in an **immediate** socket closure with the event `4400: <error-message>`. The `<error-message>` can be vaguely descriptive on why the received message is invalid.
 
-Receiving a message (other than `Subscribe`) with an ID that belongs to an operation that has been previously completed does not constitute an error. It is permissable to simply ignore all _unknown_ IDs without closing the connection.
+Receiving a message (other than `Subscribe`) with an ID that belongs to an operation that has been previously completed does not constitute an error. It is permissible to simply ignore all _unknown_ IDs without closing the connection.
 
 ## Examples
 
@@ -223,11 +225,11 @@ _The client and the server has already gone through [successful connection initi
      <br>**or**
    - _Client_ stops the subscription by dispatching a `Complete` message
    - _Server_ receives `Complete` message and completes the source stream
-   - _Client_ ignores all further messages that it recives with this ID
+   - _Client_ ignores all further messages that it receives with this ID
      <br>**or**
    - _Server_ dispatches the `Complete` message indicating that the source stream has completed
    - **Simultaneously** _client_ stops the subscription by dispatching a `Complete` message
-   - _Client_ ignores all further messages that it recives with this ID
+   - _Client_ ignores all further messages that it receives with this ID
    - _Server_ ignores the `Complete` message from the client
 
 ### Single result operation

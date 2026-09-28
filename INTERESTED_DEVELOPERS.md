@@ -47,13 +47,26 @@ yourself by username.
   - Company/Project/Repo: https://github.com/graphql/libgraphqlparser,
     https://github.com/IBM/openapi-to-graphql
   - Reason: Interested in client/server in JavaScript/C++
+- @fredrick
+  - Company/Project/Repo: https://github.com/atlassian
+  - Reason: Interested in a common HTTP spec and common subscriptions spec.
 - @ghmcadams
   - Company/Project/Repo: https://github.com/ghmcadams
   - Reason: Interested in a common HTTP spec
+- @glennblock
+  - Company/Project/Repo: https://github.com/microsoft
+  - Reason: Interested in a common HTTP spec, and in adoption of emerging HTTP
+    standards like HTTP SEARCH
+- @hemanth
+  - Company/Project/Repo: PayPal https://github.com/hemanth
+  - Reason: Interested in a common HTTP spec and common subscriptions spec.
 - @jaydenseric
   - Company/Project/Repo:
     https://github.com/jaydenseric/graphql-multipart-request-spec
   - Reason: Interested in multipart request spec
+- @JoviDeCroock
+  - Company/Project/Repo: Stellate https://github.com/urql-graphql/urql
+  - Reason: Interested in a common HTTP/subscriptions spec
 - @maraisr
   - Company/Project/Repo: https://github.com/maraisr/meros
   - Reason: Interested in common incremental delivery spec
@@ -63,9 +76,15 @@ yourself by username.
 - @mike-marcacci
   - Company/Project/Repo: https://github.com/boltline
   - Reason: Interested in client/server spec
+- @miqui
+  - Company/Project/Repo: N/A
+  - Reason: Interested in a common HTTP spec
 - @mmatsa
   - Company/Project/Repo: https://github.com/graphql/libgraphqlparser
   - Reason: Interested in client/server in C++
+- @shane32
+  - Company/Project/Repo: https://github.com/graphql-dotnet/server
+  - Reason: Interested in a common HTTP spec and common subscriptions spec
 - @sjparsons
   - Company/Project/Repo: PayPal & Braintree https://github.com/sjparsons
   - Reason: Interested in common spec
@@ -75,14 +94,11 @@ yourself by username.
 - @sungam3r
   - Company/Project/Repo: https://github.com/graphql-dotnet/server
   - Reason: Interested in client/server spec
-- @glennblock
-  - Company/Project/Report: https://github.com/microsoft
-  - Reason: Interested in a common HTTP spec, and in adoption of emerging HTTP
-    standards like HTTP SEARCH
-- @hemanth
-  - Company/Project/Repo: PayPal https://github.com/hemanth
-  - Reason: Interested in a common HTTP spec and common subscriptions spec.
+- @touchstone117
+  - Company/Project/Repo: https://github.com/amplience,
+    https://github.com/touchstone117
+  - Reason: Interested in a common HTTP spec
 
 ### CC Helper
 
-`@abernix @balshor @benjie @deinok @erikwittern @jaydenseric @michaelstaib @mike-marcacci @mmatsa @sjparsons @spawnia @sungam3r @enisdenjo`
+`@abernix @balshor @benjie @deinok @erikwittern @jaydenseric @michaelstaib @mike-marcacci @mmatsa @shane32 @sjparsons @spawnia @sungam3r @touchstone117 @enisdenjo @JoviDeCroock`

@@ -23,7 +23,7 @@ coverage
 # Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
 .grunt
 
-# Bower dependency directory (https://bower.io/)
+# Bower dependency directory (https://bower.io)
 bower_components
 
 # node-waf configuration
@@ -70,4 +70,3 @@ npm-debug.log
 /public
 /gh-pages
 yarn.lock
-package-lock.json

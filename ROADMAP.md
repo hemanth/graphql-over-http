@@ -20,7 +20,7 @@ mutations over HTTP whilst encouraging some improved practices. The majority of
 GraphQL servers should find that they are already compatible with Version 1.0 of
 the GraphQL-over-HTTP specification, although they should still put work in to
 address the `SHOULD` behaviours that they may be missing, most notably around
-the use of the `application/graphql+json` Content-Type.
+the use of the `application/graphql-response+json` Content-Type.
 
 Subscriptions, websockets and server-sent events are out of scope for version
 1.0.
@@ -68,7 +68,7 @@ Future versions of the spec may include these concepts:
 ## Stages
 
 The process of writing this specification may proceed according this rough
-outline of stages. We are currently in the _Preliminary Stage_.
+outline of stages. We are currently in the _Draft Stage_.
 
 ### Stage 0: Preliminary
 
@@ -93,7 +93,7 @@ implementations.
 
 - Before release of the spec, in "Draft" stage, we have to review the spec and
   review all open PRs
-- Every merge to master would need strong consensus
+- Every merge to main would need strong consensus
 - Only changes that address concerns
 - Implementers could start trying things
 
@@ -103,4 +103,9 @@ working group would promote it to _Draft Stage_.
 ### Stage 2: Draft
 
 This corresponds to the general
-[GraphQL Draft Stage](https://github.com/graphql/graphql-spec/blob/master/CONTRIBUTING.md#stage-2-draft)
+[GraphQL Draft Stage](https://github.com/graphql/graphql-spec/blob/main/CONTRIBUTING.md#stage-2-draft)
+
+### Stage 3: Accepted
+
+This corresponds to the general
+[GraphQL Accepted Stage](https://github.com/graphql/graphql-spec/blob/main/CONTRIBUTING.md#stage-3-accepted)

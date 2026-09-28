@@ -4,6 +4,7 @@ ignoreRegExpList:
   - /[a-z]{2,}'s/
 words:
   # Terms of art
+  - roadmap
   - endianness
   - interoperation
   - monospace
@@ -11,6 +12,15 @@ words:
   - parallelization
   - structs
   - subselection
+  - mitigations
+  - cacheable
   # Software
   - ical
+  - WebDAV
+  - Protobuf
+  - WHATWG
+  - OWASP
+  # Deliberate typos
+  - qeury
+  - __typena
   # Fictional characters / examples
